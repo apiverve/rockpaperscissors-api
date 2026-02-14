@@ -15,8 +15,8 @@ const api = new rockpaperscissorsAPI({
 
 // Example query
 var query = {
-  choice: "rock",
-  rounds: 5
+  choice: "random",
+  rounds: 1
 };
 
 // Make the API request using callback
