@@ -1,41 +1,41 @@
 openapi: 3.0.4
 info:
   title: Rock Paper Scissors
-  description: Rock Paper Scissors API simulates the classic hand game with detailed outcome analysis, statistics, and support for multiple rounds.
+  description: >-
+    Rock Paper Scissors API simulates the classic hand game with detailed
+    outcome analysis, statistics, and support for multiple rounds.
   termsOfService: https://apiverve.com/terms/
   contact:
     name: APIVerve Support
     email: hello@apiverve.com
     url: https://apiverve.com/contact
-  version: 1.0.9
+  version: 1.0.0
 externalDocs:
   description: Learn more about APIVerve
   url: https://docs.apiverve.com?utm_source=openapi
 servers:
-- url: https://api.apiverve.com/
+  - url: https://api.apiverve.com/
 paths:
   /v1/rockpaperscissors:
     get:
       summary: Play Rock Paper Scissors
-      description: Rock Paper Scissors API simulates the classic hand game with detailed outcome analysis, statistics, and support for multiple rounds.
+      description: Play rounds of Rock Paper Scissors with outcome analysis
       operationId: rockpaperscissors
       parameters:
-      - name: choice
-        default: random
-        in: query
-        schema:
-          type: string
-        required: false
-        description: Your choice (rock, paper, scissors, r, p, s) - omit for random
-        example: rock
-      - name: rounds
-        default: '1'
-        in: query
-        schema:
-          type: number
-        required: false
-        description: Number of rounds to play (1-100)
-        example: '5'
+        - name: choice
+          in: query
+          schema:
+            type: string
+          required: false
+          description: Your choice - omit for random
+          example: rock
+        - name: rounds
+          in: query
+          schema:
+            type: integer
+          required: false
+          description: Number of rounds to play
+          example: 5
       responses:
         '200':
           description: Successful Response
@@ -51,57 +51,57 @@ paths:
                     type: string
                     description: error
                   data:
-                    type: string
+                    type: object
                     description: data
               example:
                 status: ok
-                error: 
+                error: null
                 data:
                   total_rounds: 5
                   player_choice_mode: manual
                   games:
-                  - round: 1
-                    player_choice: rock
-                    player_emoji: "\U0001FAA8"
-                    computer_choice: paper
-                    computer_emoji: "\U0001F4C4"
-                    outcome: computer
-                    message: Computer wins! undefined
-                  - round: 2
-                    player_choice: rock
-                    player_emoji: "\U0001FAA8"
-                    computer_choice: paper
-                    computer_emoji: "\U0001F4C4"
-                    outcome: computer
-                    message: Computer wins! undefined
-                  - round: 3
-                    player_choice: rock
-                    player_emoji: "\U0001FAA8"
-                    computer_choice: rock
-                    computer_emoji: "\U0001FAA8"
-                    outcome: tie
-                    message: It's a tie! Both chose rock
-                  - round: 4
-                    player_choice: rock
-                    player_emoji: "\U0001FAA8"
-                    computer_choice: scissors
-                    computer_emoji: ✂️
-                    outcome: player
-                    message: You win! Rock crushes scissors
-                  - round: 5
-                    player_choice: rock
-                    player_emoji: "\U0001FAA8"
-                    computer_choice: paper
-                    computer_emoji: "\U0001F4C4"
-                    outcome: computer
-                    message: Computer wins! undefined
+                    - round: 1
+                      player_choice: rock
+                      player_emoji: 🪨
+                      computer_choice: paper
+                      computer_emoji: 📄
+                      outcome: computer
+                      message: Computer wins! undefined
+                    - round: 2
+                      player_choice: rock
+                      player_emoji: 🪨
+                      computer_choice: rock
+                      computer_emoji: 🪨
+                      outcome: tie
+                      message: It's a tie! Both chose rock
+                    - round: 3
+                      player_choice: rock
+                      player_emoji: 🪨
+                      computer_choice: rock
+                      computer_emoji: 🪨
+                      outcome: tie
+                      message: It's a tie! Both chose rock
+                    - round: 4
+                      player_choice: rock
+                      player_emoji: 🪨
+                      computer_choice: paper
+                      computer_emoji: 📄
+                      outcome: computer
+                      message: Computer wins! undefined
+                    - round: 5
+                      player_choice: rock
+                      player_emoji: 🪨
+                      computer_choice: scissors
+                      computer_emoji: ✂️
+                      outcome: player
+                      message: You win! Rock crushes scissors
                   results:
                     player_wins: 1
-                    computer_wins: 3
-                    ties: 1
+                    computer_wins: 2
+                    ties: 2
                     player_win_percentage: 20
-                    computer_win_percentage: 60
-                    tie_percentage: 20
+                    computer_win_percentage: 40
+                    tie_percentage: 40
                   overall_winner: computer
                   game_rules:
                     rock_beats: scissors
@@ -112,7 +112,7 @@ paths:
         '404':
           description: Requested resource was not found
         '500':
-          description: A server error has occured, try again later
+          description: A server error has occurred, try again later
 components:
   securitySchemes:
     api_key:
@@ -120,4 +120,4 @@ components:
       name: x-api-key
       in: header
 security:
-- api_key: []
+  - api_key: []
