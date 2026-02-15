@@ -1,1 +1,3 @@
-from .apiClient import RockpaperscissorsAPIClient
+from .apiClient import RockpaperscissorsAPIClient, RockpaperscissorsAPIClientError
+
+__all__ = ['RockpaperscissorsAPIClient', 'RockpaperscissorsAPIClientError']
