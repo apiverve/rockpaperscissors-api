@@ -11,15 +11,13 @@ namespace APIVerve.API.RockPaperScissors
     public class RockPaperScissorsQueryOptions
     {
         /// <summary>
-        /// Your choice (rock, paper, scissors, r, p, s) - omit for random
-        /// Example: rock
+        /// Your choice - omit for random
         /// </summary>
         [JsonProperty("choice")]
         public string Choice { get; set; }
 
         /// <summary>
-        /// Number of rounds to play (1-100)
-        /// Example: 5
+        /// Number of rounds to play
         /// </summary>
         [JsonProperty("rounds")]
         public string Rounds { get; set; }
