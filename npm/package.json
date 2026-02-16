@@ -1,6 +1,6 @@
 {
   "name": "@apiverve/rockpaperscissors",
-  "version": "1.1.13",
+  "version": "1.1.14",
   "description": "Rock Paper Scissors API simulates the classic hand game with detailed outcome analysis, statistics, and support for multiple rounds.",
   "main": "index.js",
   "types": "index.d.ts",
