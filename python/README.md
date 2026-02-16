@@ -44,7 +44,10 @@ from apiverve_rockpaperscissors.apiClient import RockpaperscissorsAPIClient
 # Initialize the client with your APIVerve API key
 api = RockpaperscissorsAPIClient("[YOUR_API_KEY]")
 
-query = { "choice": "random", "rounds": 1 }
+query = {
+    "choice": "random",
+    "rounds": 1
+}
 
 try:
     # Make the API call
@@ -82,7 +85,10 @@ Using the API client, you can perform requests to the API.
 ###### Define Query
 
 ```python
-query = { "choice": "random", "rounds": 1 }
+query = {
+    "choice": "random",
+    "rounds": 1
+}
 ```
 
 ###### Simple Request
@@ -182,7 +188,10 @@ from apiverve_rockpaperscissors.apiClient import RockpaperscissorsAPIClient, Roc
 
 api = RockpaperscissorsAPIClient("[YOUR_API_KEY]")
 
-query = { "choice": "random", "rounds": 1 }
+query = {
+    "choice": "random",
+    "rounds": 1
+}
 
 try:
     result = api.execute(query)
@@ -203,7 +212,10 @@ from apiverve_rockpaperscissors.apiClient import RockpaperscissorsAPIClient, Roc
 
 api = RockpaperscissorsAPIClient("[YOUR_API_KEY]")
 
-query = { "choice": "random", "rounds": 1 }
+query = {
+    "choice": "random",
+    "rounds": 1
+}
 
 try:
     result = api.execute(query)
@@ -237,7 +249,10 @@ The client supports the context manager protocol for automatic resource cleanup:
 ```python
 from apiverve_rockpaperscissors.apiClient import RockpaperscissorsAPIClient, RockpaperscissorsAPIClientError
 
-query = { "choice": "random", "rounds": 1 }
+query = {
+    "choice": "random",
+    "rounds": 1
+}
 
 # Using context manager ensures proper cleanup
 with RockpaperscissorsAPIClient("[YOUR_API_KEY]") as api:
@@ -263,7 +278,10 @@ from apiverve_rockpaperscissors.apiClient import RockpaperscissorsAPIClient
 # Enable debug mode
 api = RockpaperscissorsAPIClient("[YOUR_API_KEY]", debug=True)
 
-query = { "choice": "random", "rounds": 1 }
+query = {
+    "choice": "random",
+    "rounds": 1
+}
 
 # Debug information will be printed to console
 result = api.execute(query)
@@ -278,8 +296,12 @@ from apiverve_rockpaperscissors.apiClient import RockpaperscissorsAPIClient
 
 api = RockpaperscissorsAPIClient("[YOUR_API_KEY]")
 
+query = {
+    "choice": "random",
+    "rounds": 1
+}
+
 try:
-    query = { "choice": "random", "rounds": 1 }
     result = api.execute(query)
     print(result)
 finally:
