@@ -12,8 +12,13 @@ public class BasicExample {
         RockPaperScissorsAPIClient client = new RockPaperScissorsAPIClient("YOUR_API_KEY_HERE");
 
         try {
-            // Execute the API request (no parameters required)
-            APIResponse response = client.execute(null);
+            // Query parameters
+            Map&lt;String, Object&gt; parameters &#x3D; new HashMap&lt;&gt;();
+        parameters.put(&quot;choice&quot;, &quot;rock&quot;);
+        parameters.put(&quot;rounds&quot;, 5);
+
+            // Execute the API request
+            APIResponse response = client.execute(parameters);
 
             // Check if the request was successful
             if (response.isSuccess()) {
