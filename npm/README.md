@@ -141,10 +141,10 @@ async function makeRequest() {
         "round": 2,
         "player_choice": "rock",
         "player_emoji": "🪨",
-        "computer_choice": "paper",
-        "computer_emoji": "📄",
-        "outcome": "computer",
-        "message": "Computer wins! undefined"
+        "computer_choice": "rock",
+        "computer_emoji": "🪨",
+        "outcome": "tie",
+        "message": "It's a tie! Both chose rock"
       },
       {
         "round": 3,
@@ -159,28 +159,28 @@ async function makeRequest() {
         "round": 4,
         "player_choice": "rock",
         "player_emoji": "🪨",
-        "computer_choice": "scissors",
-        "computer_emoji": "✂️",
-        "outcome": "player",
-        "message": "You win! Rock crushes scissors"
+        "computer_choice": "paper",
+        "computer_emoji": "📄",
+        "outcome": "computer",
+        "message": "Computer wins! undefined"
       },
       {
         "round": 5,
         "player_choice": "rock",
         "player_emoji": "🪨",
-        "computer_choice": "paper",
-        "computer_emoji": "📄",
-        "outcome": "computer",
-        "message": "Computer wins! undefined"
+        "computer_choice": "scissors",
+        "computer_emoji": "✂️",
+        "outcome": "player",
+        "message": "You win! Rock crushes scissors"
       }
     ],
     "results": {
       "player_wins": 1,
-      "computer_wins": 3,
-      "ties": 1,
+      "computer_wins": 2,
+      "ties": 2,
       "player_win_percentage": 20,
-      "computer_win_percentage": 60,
-      "tie_percentage": 20
+      "computer_win_percentage": 40,
+      "tie_percentage": 40
     },
     "overall_winner": "computer",
     "game_rules": {
