@@ -13,7 +13,13 @@ const API_URL = 'https://api.apiverve.com/v1/rockpaperscissors';
  */
 async function callRockPaperScissorsAPI() {
   try {
-    const response = await fetch(API_URL, {
+    // Query parameters
+    const params &#x3D; new URLSearchParams({
+            choice: &#x27;rock&#x27;,
+            rounds: 5
+        });
+
+    const response = await fetch(`${API_URL}?${params}`, {
       method: 'GET',
       headers: {
         'x-api-key': API_KEY
