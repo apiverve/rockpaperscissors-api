@@ -4,46 +4,58 @@ declare module '@apiverve/rockpaperscissors' {
     secure?: boolean;
   }
 
+  /**
+   * Describes fields the current plan does not unlock. Locked fields arrive as null
+   * in `data`; `locked_fields` names them, using dot paths for nested fields.
+   * Absent when the plan unlocks everything.
+   */
+  export interface PremiumInfo {
+    message: string;
+    upgrade_url: string;
+    locked_fields: string[];
+  }
+
   export interface rockpaperscissorsResponse {
     status: string;
     error: string | null;
     data: RockPaperScissorsData;
     code?: number;
+    premium?: PremiumInfo;
   }
 
 
   interface RockPaperScissorsData {
-      totalRounds:      number;
-      playerChoiceMode: string;
+      totalRounds:      number | null;
+      playerChoiceMode: null | string;
       games:            Game[];
       results:          Results;
-      overallWinner:    string;
+      overallWinner:    null | string;
       gameRules:        GameRules;
   }
   
   interface GameRules {
-      rockBeats:     string;
-      paperBeats:    string;
-      scissorsBeats: string;
+      rockBeats:     null | string;
+      paperBeats:    null | string;
+      scissorsBeats: null | string;
   }
   
   interface Game {
-      round:          number;
-      playerChoice:   string;
-      playerEmoji:    string;
-      computerChoice: string;
-      computerEmoji:  string;
-      outcome:        string;
-      message:        string;
+      round:          number | null;
+      playerChoice:   null | string;
+      playerEmoji:    null | string;
+      computerChoice: null | string;
+      computerEmoji:  null | string;
+      outcome:        null | string;
+      message:        null | string;
   }
   
   interface Results {
-      playerWINS:            number;
-      computerWINS:          number;
-      ties:                  number;
-      playerWinPercentage:   number;
-      computerWinPercentage: number;
-      tiePercentage:         number;
+      playerWINS:            number | null;
+      computerWINS:          number | null;
+      ties:                  number | null;
+      playerWinPercentage:   number | null;
+      computerWinPercentage: number | null;
+      tiePercentage:         number | null;
   }
 
   export default class rockpaperscissorsWrapper {
