@@ -25,12 +25,15 @@ namespace APIVerve.API.RockPaperScissors
 
         [JsonProperty("data")]
         public Data Data { get; set; }
+
+        [JsonProperty("premium")]
+        public Premium Premium { get; set; }
     }
 
     public partial class Data
     {
         [JsonProperty("total_rounds")]
-        public long TotalRounds { get; set; }
+        public long? TotalRounds { get; set; }
 
         [JsonProperty("player_choice_mode")]
         public string PlayerChoiceMode { get; set; }
@@ -63,7 +66,7 @@ namespace APIVerve.API.RockPaperScissors
     public partial class Game
     {
         [JsonProperty("round")]
-        public long Round { get; set; }
+        public long? Round { get; set; }
 
         [JsonProperty("player_choice")]
         public string PlayerChoice { get; set; }
@@ -87,21 +90,33 @@ namespace APIVerve.API.RockPaperScissors
     public partial class Results
     {
         [JsonProperty("player_wins")]
-        public long PlayerWins { get; set; }
+        public long? PlayerWins { get; set; }
 
         [JsonProperty("computer_wins")]
-        public long ComputerWins { get; set; }
+        public long? ComputerWins { get; set; }
 
         [JsonProperty("ties")]
-        public long Ties { get; set; }
+        public long? Ties { get; set; }
 
         [JsonProperty("player_win_percentage")]
-        public long PlayerWinPercentage { get; set; }
+        public long? PlayerWinPercentage { get; set; }
 
         [JsonProperty("computer_win_percentage")]
-        public long ComputerWinPercentage { get; set; }
+        public long? ComputerWinPercentage { get; set; }
 
         [JsonProperty("tie_percentage")]
-        public long TiePercentage { get; set; }
+        public long? TiePercentage { get; set; }
+    }
+
+    public partial class Premium
+    {
+        [JsonProperty("message")]
+        public string Message { get; set; }
+
+        [JsonProperty("upgrade_url")]
+        public Uri UpgradeUrl { get; set; }
+
+        [JsonProperty("locked_fields")]
+        public string[] LockedFields { get; set; }
     }
 }
