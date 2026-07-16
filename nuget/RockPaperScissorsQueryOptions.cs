@@ -20,6 +20,6 @@ namespace APIVerve.API.RockPaperScissors
         /// Number of rounds to play
         /// </summary>
         [JsonProperty("rounds")]
-        public string Rounds { get; set; }
+        public int? Rounds { get; set; }
     }
 }
