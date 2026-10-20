@@ -3,11 +3,10 @@ Rock Paper Scissors API
 
 Rock Paper Scissors API simulates the classic hand game with detailed outcome analysis, statistics, and support for multiple rounds.
 
-![Build Status](https://img.shields.io/badge/build-passing-green)
-![Code Climate](https://img.shields.io/badge/maintainability-B-purple)
-![Prod Ready](https://img.shields.io/badge/production-ready-blue)
 
-This is a Python API Wrapper for the [Rock Paper Scissors API](https://apiverve.com/marketplace/rockpaperscissors?utm_source=pypi&utm_medium=readme)
+[![PyPI version](https://img.shields.io/pypi/v/apiverve-rockpaperscissors.svg)](https://pypi.org/project/apiverve-rockpaperscissors/)
+
+This is a Python wrapper for the [Rock Paper Scissors API](https://apiverve.com/marketplace/rockpaperscissors?utm_source=pypi&utm_medium=referral&utm_content=readme)
 
 ---
 
@@ -29,8 +28,8 @@ pip3 install apiverve-rockpaperscissors
 
 ## Configuration
 
-Before using the rockpaperscissors API client, you have to setup your account and obtain your API Key.
-You can get it by signing up at [https://apiverve.com](https://apiverve.com?utm_source=pypi&utm_medium=readme)
+Before using the Rock Paper Scissors API client, you have to setup your account and obtain your API Key.
+You can get it by signing up at [https://apiverve.com](https://apiverve.com?utm_source=pypi&utm_medium=referral&utm_content=readme)
 
 ---
 
@@ -63,7 +62,7 @@ except Exception as e:
 
 ## Usage
 
-The Rock Paper Scissors API documentation is found here: [https://docs.apiverve.com/ref/rockpaperscissors](https://docs.apiverve.com/ref/rockpaperscissors?utm_source=pypi&utm_medium=readme).
+The Rock Paper Scissors API documentation is found here: [https://docs.apiverve.com/ref/rockpaperscissors](https://docs.apiverve.com/ref/rockpaperscissors?utm_source=pypi&utm_medium=referral&utm_content=readme).
 You can find parameters, example responses, and status codes documented here.
 
 ### Setup
@@ -124,10 +123,10 @@ print(result)
         "round": 2,
         "player_choice": "rock",
         "player_emoji": "🪨",
-        "computer_choice": "paper",
-        "computer_emoji": "📄",
-        "outcome": "computer",
-        "message": "Computer wins! undefined"
+        "computer_choice": "rock",
+        "computer_emoji": "🪨",
+        "outcome": "tie",
+        "message": "It's a tie! Both chose rock"
       },
       {
         "round": 3,
@@ -142,28 +141,28 @@ print(result)
         "round": 4,
         "player_choice": "rock",
         "player_emoji": "🪨",
-        "computer_choice": "scissors",
-        "computer_emoji": "✂️",
-        "outcome": "player",
-        "message": "You win! Rock crushes scissors"
+        "computer_choice": "paper",
+        "computer_emoji": "📄",
+        "outcome": "computer",
+        "message": "Computer wins! undefined"
       },
       {
         "round": 5,
         "player_choice": "rock",
         "player_emoji": "🪨",
-        "computer_choice": "paper",
-        "computer_emoji": "📄",
-        "outcome": "computer",
-        "message": "Computer wins! undefined"
+        "computer_choice": "scissors",
+        "computer_emoji": "✂️",
+        "outcome": "player",
+        "message": "You win! Rock crushes scissors"
       }
     ],
     "results": {
       "player_wins": 1,
-      "computer_wins": 3,
-      "ties": 1,
+      "computer_wins": 2,
+      "ties": 2,
       "player_win_percentage": 20,
-      "computer_win_percentage": 60,
-      "tie_percentage": 20
+      "computer_win_percentage": 40,
+      "tie_percentage": 40
     },
     "overall_winner": "computer",
     "game_rules": {
@@ -313,7 +312,7 @@ finally:
 
 ## Customer Support
 
-Need any assistance? [Get in touch with Customer Support](https://apiverve.com/contact?utm_source=pypi&utm_medium=readme).
+Need any assistance? [Get in touch with Customer Support](https://apiverve.com/contact?utm_source=pypi&utm_medium=referral&utm_content=readme).
 
 ---
 
@@ -324,12 +323,12 @@ Stay up to date by following [@apiverveHQ](https://twitter.com/apiverveHQ) on Tw
 
 ## Legal
 
-All usage of the APIVerve website, API, and services is subject to the [APIVerve Terms of Service](https://apiverve.com/terms?utm_source=pypi&utm_medium=readme) and all legal documents and agreements.
+All usage of the APIVerve website, API, and services is subject to the [APIVerve Terms of Service](https://apiverve.com/terms?utm_source=pypi&utm_medium=referral&utm_content=readme) and all legal documents and agreements.
 
 ---
 
 ## License
-Licensed under the The MIT License (MIT)
+Licensed under the MIT License (MIT)
 
 Copyright (&copy;) 2026 APIVerve, and EvlarSoft LLC
 
