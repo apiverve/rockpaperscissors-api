@@ -1,13 +1,13 @@
-# [Rock Paper Scissors API](https://apiverve.com/marketplace/rockpaperscissors?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)
+# [Rock Paper Scissors API](https://apiverve.com/marketplace/rockpaperscissors?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)
 
 Rock Paper Scissors API simulates the classic hand game with detailed outcome analysis, statistics, and support for multiple rounds.
 
 The Rock Paper Scissors API provides a simple, reliable way to integrate rock paper scissors functionality into your applications. Built for developers who need production-ready rock paper scissors capabilities without the complexity of building from scratch.
 
-**[View API Details →](https://apiverve.com/marketplace/rockpaperscissors?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)**
+**[View API Details →](https://apiverve.com/marketplace/rockpaperscissors?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![API Status](https://img.shields.io/badge/Status-Active-green.svg)](https://apiverve.com/marketplace/rockpaperscissors?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)
+[![API Status](https://img.shields.io/badge/Status-Active-green.svg)](https://apiverve.com/marketplace/rockpaperscissors?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)
 [![Method](https://img.shields.io/badge/Method-GET-blue.svg)](#)
 [![Platform](https://img.shields.io/badge/Platform-Multi--Platform-orange.svg)](#installation)
 
@@ -162,7 +162,7 @@ go get github.com/apiverve/rockpaperscissors-api/go
 
 ## Documentation
 
-- 🏠 **API Home:** [Rock Paper Scissors API](https://apiverve.com/marketplace/rockpaperscissors?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)
+- 🏠 **API Home:** [Rock Paper Scissors API](https://apiverve.com/marketplace/rockpaperscissors?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)
 - 📚 **API Reference:** [docs.apiverve.com/ref/rockpaperscissors](https://docs.apiverve.com/ref/rockpaperscissors)
 - 📖 **OpenAPI Spec:** [openapi.yaml](./openapi.yaml)
 - 💡 **Examples:** [examples/](./examples/)
@@ -192,11 +192,90 @@ x-api-key: YOUR_API_KEY_HERE
 Get your API key: [https://apiverve.com](https://apiverve.com)
 
 ### Response Format
-All responses are JSON with this structure:
+
+Every APIVerve endpoint returns the same envelope — check `status`, then read `data`:
+
 ```json
 {
   "status": "ok",
+  "error": null,
   "data": { ... }
+}
+```
+
+### Example Response
+
+A real response from the Rock Paper Scissors API:
+
+```json
+{
+  "status": "ok",
+  "error": null,
+  "data": {
+    "total_rounds": 5,
+    "player_choice_mode": "manual",
+    "games": [
+      {
+        "round": 1,
+        "player_choice": "rock",
+        "player_emoji": "🪨",
+        "computer_choice": "paper",
+        "computer_emoji": "📄",
+        "outcome": "computer",
+        "message": "Computer wins! undefined"
+      },
+      {
+        "round": 2,
+        "player_choice": "rock",
+        "player_emoji": "🪨",
+        "computer_choice": "rock",
+        "computer_emoji": "🪨",
+        "outcome": "tie",
+        "message": "It's a tie! Both chose rock"
+      },
+      {
+        "round": 3,
+        "player_choice": "rock",
+        "player_emoji": "🪨",
+        "computer_choice": "rock",
+        "computer_emoji": "🪨",
+        "outcome": "tie",
+        "message": "It's a tie! Both chose rock"
+      },
+      {
+        "round": 4,
+        "player_choice": "rock",
+        "player_emoji": "🪨",
+        "computer_choice": "paper",
+        "computer_emoji": "📄",
+        "outcome": "computer",
+        "message": "Computer wins! undefined"
+      },
+      {
+        "round": 5,
+        "player_choice": "rock",
+        "player_emoji": "🪨",
+        "computer_choice": "scissors",
+        "computer_emoji": "✂️",
+        "outcome": "player",
+        "message": "You win! Rock crushes scissors"
+      }
+    ],
+    "results": {
+      "player_wins": 1,
+      "computer_wins": 2,
+      "ties": 2,
+      "player_win_percentage": 20,
+      "computer_win_percentage": 40,
+      "tie_percentage": 40
+    },
+    "overall_winner": "computer",
+    "game_rules": {
+      "rock_beats": "scissors",
+      "paper_beats": "rock",
+      "scissors_beats": "paper"
+    }
+  }
 }
 ```
 
@@ -204,7 +283,7 @@ All responses are JSON with this structure:
 
 ## Support & Community
 
-- 🏠 **API Home**: [Rock Paper Scissors API](https://apiverve.com/marketplace/rockpaperscissors?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)
+- 🏠 **API Home**: [Rock Paper Scissors API](https://apiverve.com/marketplace/rockpaperscissors?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)
 - 💬 **Support**: [https://apiverve.com/contact](https://apiverve.com/contact)
 - 🐛 **Issues**: [GitHub Issues](../../issues)
 - 📖 **Documentation**: [https://docs.apiverve.com](https://docs.apiverve.com)

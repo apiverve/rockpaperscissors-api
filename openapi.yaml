@@ -18,7 +18,7 @@ servers:
 paths:
   /v1/rockpaperscissors:
     get:
-      summary: Play Rock Paper Scissors
+      summary: Rock Paper Scissors
       description: Play rounds of Rock Paper Scissors with outcome analysis
       operationId: rockpaperscissors
       parameters:
