@@ -1,7 +1,7 @@
 {
     "name": "apiverve/rockpaperscissors",
     "description": "Rock Paper Scissors API simulates the classic hand game with detailed outcome analysis, statistics, and support for multiple rounds.",
-    "version": "1.2.2",
+    "version": "1.2.3",
     "type": "library",
     "license": "MIT",
     "authors": [
